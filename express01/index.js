@@ -4,8 +4,6 @@ let data = require('./data');
 const app = express()
 const PORT = 5700
 
-// Data
-console.log(data.produk);
 let id = 4
 
 const logging = (req, res, next) => {
@@ -18,6 +16,10 @@ app.use(logging)
 app.use(cors())
 
 // verb GET
+app.get("/produk", (req, res) => {
+    return res.status(200).send(data.produk)
+})
+
 app.get("/produk/:id", (req, res) => {
     const { id } = req.params
     let indexProduk = data.produk.findIndex(val => val.id == id)

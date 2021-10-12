@@ -1,0 +1,21 @@
+### GET ALL USERS DATA
+GET http://localhost:1800/users/ HTTP/1.1
+content-type: application/json
+
+### GET USERS DATA BY ID
+GET http://localhost:1800/users/10 HTTP/1.1
+content-type: application/json
+
+### GET USERS DATA BY QUERY
+GET http://localhost:1800/users?username=jaki HTTP/1.1
+content-type: application/json
+
+### POST
+POST http://localhost:1800/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "donhilmo",
+    "password": "masasih",
+    "address": "menteng"
+}
